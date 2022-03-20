@@ -21,11 +21,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnPink"
+        android:id="@+id/btnBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#F2A2C0"
-        android:text="Pink"
+        android:backgroundTint="#000000"
+        android:text="Black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
@@ -34,14 +34,14 @@
         app:layout_constraintVertical_bias="0.707" />
 
     <Button
-        android:id="@+id/btnYellow"
+        android:id="@+id/btnPink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:backgroundTint="#F2D98D"
-        android:text="Yellow"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnPink"
-        app:layout_constraintStart_toEndOf="@+id/btnPink" />
+        android:backgroundTint="#FF69B4"
+        android:text="Pink"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnBlack"
+        app:layout_constraintStart_toEndOf="@+id/btnBlack" />
 
     <Button
         android:id="@+id/btnBlue"
@@ -50,8 +50,8 @@
         android:layout_marginStart="4dp"
         android:backgroundTint="#03A9F4"
         android:text="Blue"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnYellow"
-        app:layout_constraintStart_toEndOf="@+id/btnYellow" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnPink"
+        app:layout_constraintStart_toEndOf="@+id/btnPink" />
 
     <Button
         android:id="@+id/btnGreen"

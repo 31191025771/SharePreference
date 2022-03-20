@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
-    Button btnYellow, btnBlue, btnPink, btnGreen, btnCount, btnReset, btnSave;
+    Button btnBlack, btnBlue, btnPink, btnGreen, btnCount, btnReset, btnSave;
     int i = 0;
     String currentColor = "#FFFFFF";
     SharedPreferences mPreferences;
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         mPreferences = getSharedPreferences("helloSharePrefs", Context.MODE_PRIVATE);
         textView = findViewById(R.id.textView);
         btnCount = findViewById(R.id.btnCount);
+        btnBlack = findViewById(R.id.btnBlack);
         btnPink = findViewById(R.id.btnPink);
-        btnYellow = findViewById(R.id.btnYellow);
         btnBlue = findViewById(R.id.btnBlue);
         btnGreen = findViewById(R.id.btnGreen);
         btnSave = findViewById(R.id.btnSave);
@@ -40,28 +40,21 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(String.valueOf(i));
             }
         });
+
+        btnBlack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setBackgroundColor(Color.parseColor("#000000"));
+                textView.setTextColor(Color.parseColor("#FFFFFF"));
+                currentColor = "#000000";
+            }
+        });
+
         btnPink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView.setBackgroundColor(Color.parseColor("#F2A2C0"));
-                textView.setTextColor(Color.parseColor("#FFFFFF"));
-                currentColor = "#F2A3C0";
-            }
-        });
-
-        btnYellow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView.setBackgroundColor(Color.parseColor("#F2D98D"));
-                currentColor = "#F2D98D";
-            }
-        });
-
-        btnGreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView.setBackgroundColor(Color.parseColor("#8BC34A"));
-                currentColor = "#8BC34A";
+                textView.setBackgroundColor(Color.parseColor("#FF69B4"));
+                currentColor = "#FF69B4";
             }
         });
 
@@ -70,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textView.setBackgroundColor(Color.parseColor("#03A9F4"));
                 currentColor = "#03A9F4";
+            }
+        });
+
+        btnGreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setBackgroundColor(Color.parseColor("#8BC34A"));
+                currentColor = "#8BC34A";
             }
         });
 
